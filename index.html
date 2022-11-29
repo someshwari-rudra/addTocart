@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>search and filter Products</title>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+          <div class="container">
+            <a class="navbar-brand" href="#">E-commerce</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                <div class="w-100">
+                    <form class=" d-flex w-100 mt-2 mt-lg-0" role="search">
+                        <input class="form-control me-2 shadow-sm" type="search" placeholder="Search" id="searchInput" aria-label="Search"> 
+                        <button type="submit" class="btn btn-outline-success" id="SearchBtn">Search</button>
+                    </form> 
+                </div>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                      <li class="nav-item dropdown" id="dropdownBtn">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          filter
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li  id="All" onclick="filterBasedOnDropdown('All')"><a class="dropdown-item" href="#">All</a></li>
+                          <li id="women" onclick="filterBasedOnDropdown('women')"><a class="dropdown-item"  href="#">women's T-shirt</a></li>
+                          <li id="men" onclick="filterBasedOnDropdown('men')"><a class="dropdown-item" href="#">Mens's T-shirt</a></li>
+                          <li id="kids" onclick="filterBasedOnDropdown('kids')"><a class="dropdown-item" href="#">Kids T-shirt</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                  <a href="/cartDetails.html"><button type="button" class="btn btn-warning position-relative">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                     0
+                      <span class="visually-hidden">unread messages</span>
+                    </span>
+                  </button></a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+        <div class="row" id="ShowProducts"></div>
+    </div>
+    <div class="container-fluid">
+        <div class="row mt-5 mx-2">
+            <div class="col-md-12 col-xl-6" id="cartID">
+                <!-- <div class="card p-3">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="/images/women/women1.jpeg" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-md-9">
+                            <h1>women's T-shirt </h1>
+                            <p>price: ₹2000</p>
+                            <div class="d-flex justify-content-between align-item-center">
+                                <div class="div">
+                                    <span class="btn btn-secondary me-2">+</span>
+                                    <span>0</span>
+                                    <span class="btn btn-secondary ms-2">-</span>
+                                </div>
+                                <button class="btn btn-warning ">Remove</button>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="col-md-12 col-xl-6" >
+                <h1>Price Details</h1>
+                <div id="showPriceDetails">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
